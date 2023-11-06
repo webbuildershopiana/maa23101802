@@ -208,7 +208,7 @@
           var els = document.querySelectorAll(ids);
           for (var i = 0, len = els.length; i < len; i++) {
             var el = els[i];
-            (function({name:t,method:e,url:n,emailenable:r}){if(t){const o=this;this.addEventListener("submit",i=>{i.preventDefault();const a=new FormData(o);a.append("emailEnabled",r),a.append("formName",t),fetch(n,{method:e,body:a}).then(t=>{if(t.ok)return t.json();throw new Error("API call failed")}).then(t=>{console.log("API response:",t)}).catch(t=>{console.error("Error during API call:",t)})})}else console.log("somthing went wrong")}.bind(el))(props[el.id]);
+            (function({name:t,method:e,url:n,emailenable:r}){if(t){const o=this;this.addEventListener("submit",i=>{i.preventDefault();const s=new FormData(o);s.append("emailEnabled",r),s.append("formName",t),fetch(n,{method:e,body:s}).then(t=>{if(t.ok)return t.json();throw new Error("API call failed")}).then(t=>{console.log("API response:",t)}).catch(t=>{console.error("Error during API call:",t)})})}else console.log("somthing went wrong")}.bind(el))(props[el.id]);
           }</script>
  </body>
 </html>
